@@ -1,3 +1,15 @@
+libx11 (2:1.6.9-2ubuntu1.2) focal-security; urgency=medium
+
+  * SECURITY UPDATE: extra X protocol requests via unchecked string lengths
+    - debian/patches/CVE-2021-31535.patch: reject strings longer than
+      USHRT_MAX before sending them on the wire in src/Font.c,
+      src/FontInfo.c, src/FontNames.c, src/GetColor.c, src/LoadFont.c,
+      src/LookupCol.c, src/ParseCol.c, src/QuExt.c, src/SetFPath.c,
+      src/SetHints.c, src/StNColor.c, src/StName.c .
+    - CVE-2021-31535
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 19 May 2021 13:07:18 -0400
+
 libx11 (2:1.6.9-2ubuntu1.1) focal-security; urgency=medium
 
   * SECURITY UPDATE: integer overflow and heap overflow in XIM client
