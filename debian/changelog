@@ -1,3 +1,14 @@
+libx11 (2:1.6.9-2ubuntu1.5) focal-security; urgency=medium
+
+  * SECURITY UPDATE: multiple buffer overflows
+    - debian/patches/CVE-2023-3138.patch: add bounds checks for extension
+      request, event, & error codes in src/InitExt.c.
+    - CVE-2023-3138
+  * This update does _not_ contain the changes from 2:1.6.9-2ubuntu1.3 in
+    focal-proposed.
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 13 Jun 2023 07:26:48 -0400
+
 libx11 (2:1.6.9-2ubuntu1.2) focal-security; urgency=medium
 
   * SECURITY UPDATE: extra X protocol requests via unchecked string lengths
